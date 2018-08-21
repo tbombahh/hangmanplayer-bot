@@ -3,10 +3,10 @@ var VERSIONNUMBER = "2.4";
 var HTTPS = require('https');
 var botID = process.env.BOT_ID;
 
-var r1 = /\/play$/,
-	 r2 = /\/guess\s[a-zA-Z]$/,
-	 r3 = /\/forfeit$/,
-	 r4 = /\/progress$/,
+var r1 = /\!play$/,
+	 r2 = /\/guess\s[a-zA-Z]$/;
+	 r3 = /\/forfeit$/;
+	 r4 = /\/progress$/;
 	 r5 = /\/help$/;
 	 r6 = /\/about$/;
 
