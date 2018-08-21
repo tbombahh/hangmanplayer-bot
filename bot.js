@@ -3,12 +3,12 @@ var VERSIONNUMBER = "2.4";
 var HTTPS = require('https');
 var botID = process.env.BOT_ID;
 
-var r1 = /\!play$/,
-	 r2 = /\!guess\s[a-zA-Z]$/,
-	 r3 = /\!forfeit$/,
-	 r4 = /\!progress$/,
-	 r5 = /\!help$/;
-	 r6 = /\!about$/;
+var r1 = /\/play$/,
+	 r2 = /\/guess\s[a-zA-Z]$/,
+	 r3 = /\/forfeit$/,
+	 r4 = /\/progress$/,
+	 r5 = /\/help$/;
+	 r6 = /\/about$/;
 
 var currentlyPlayingGame = false;
 
@@ -28,7 +28,7 @@ function respond() {
 	if(request.text && r1.test(request.text.toLowerCase())) {
 		if(currentlyPlayingGame){
 			this.res.writeHead(200);
-			sendMessage("You are already playing a game. Type \"!forfeit\" to end your game.");
+			sendMessage("You are already playing a game. Type \"/forfeit\" to end your game.");
 			this.res.end();
 		} else {
 			this.res.writeHead(200);
@@ -44,7 +44,7 @@ function respond() {
 			this.res.end();
 		} else {
 			this.res.writeHead(200);
-			sendMessage("You are not currently playing a game. Type \"!play\" to start a game.");
+			sendMessage("You are not currently playing a game. Type \"/play\" to start a game.");
 			this.res.end();
 		}
 	}
@@ -56,7 +56,7 @@ function respond() {
 			this.res.end();
 		} else {
 			this.res.writeHead(200);
-			sendMessage("You are not currently playing a game. Type \"!play\" to start a game.");
+			sendMessage("You are not currently playing a game. Type \"/play\" to start a game.");
 			this.res.end();
 		}
 	}
@@ -68,14 +68,14 @@ function respond() {
 			this.res.end();
 		} else {
 			this.res.writeHead(200);
-			sendMessage("You are not currently playing a game. Type \"!play\" to start a game.");
+			sendMessage("You are not currently playing a game. Type \"/play\" to start a game.");
 			this.res.end();
 		}
 	}
 
 	else if(request.text && r5.test(request.text.toLowerCase())) {
 		this.res.writeHead(200);
-		sendMessage("I am a bot that runs games of Hangman. Type \"!play\" to start a game. Type \"!guess [letter]\" to guess that letter. Type \"!progress\" to see progress on the game. Type \"!forfeit\" to end a game. Type \"!stats\" to see stats about the number of games played. Note that sometimes I can be a little slow to respond, so be patient!");
+		sendMessage("I am a bot that runs games of Hangman. Type \"/play\" to start a game. Type \"/guess [letter]\" to guess that letter. Type \"/progress\" to see progress on the game. Type \"/forfeit\" to end a game. Type \"/stats\" to see stats about the number of games played. Note that sometimes I can be a little slow to respond, so be patient!");
 		this.res.end();
 	}
 
