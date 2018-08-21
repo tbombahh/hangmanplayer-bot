@@ -9,6 +9,7 @@ var r1 = /^\/play$/,
 	 r4 = /^\/progress$/;
 	 r5 = /^\/help$/;
 	 r6 = /^\/about$/;
+	 r1 = /^\/play$/;
 
 var currentlyPlayingGame = false;
 
