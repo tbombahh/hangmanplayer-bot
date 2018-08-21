@@ -21,7 +21,7 @@ var guessedLetters = "";
 var guessesMax = 5;
 var guessesRemain = 5;
 
-var wordList = ["alcohol","corona","free","qwertyuiop","asdfghjkl","zxcvbnm","asdfyhgiopw","vferjwsctnma];
+var wordList = ["alcohol","corona","free","qwertyuiop","asdfghjkl","zxcvbnm","asdfyhgiopw","vferjwsctnma"];
 
 function respond() {
 	request = JSON.parse(this.req.chunks[0]);
