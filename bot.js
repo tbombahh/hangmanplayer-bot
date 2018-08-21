@@ -142,7 +142,7 @@ function startGame() {
 }
 	
 function generateWord(){
-	rng = (Math.floor((Math.random() * 4379) + 1));
+	rng = (Math.floor((Math.random() * 2) + 1));
 	guessWord = wordList[rng];
 }
 
