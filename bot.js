@@ -20,7 +20,7 @@ var guessedLetters = "";
 var guessesMax = 5;
 var guessesRemain = 5;
 
-var wordList = ["alcohol"];
+var wordList = ["alcohol","corona","free"];
 
 function respond() {
 	request = JSON.parse(this.req.chunks[0]);
